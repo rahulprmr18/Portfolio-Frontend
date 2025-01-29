@@ -1,0 +1,42 @@
+/* error.css */
+
+.error-container {
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the screen */
+  display: flex;
+  flex-direction: column; /* Allow content to stack vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background color for the error page */
+}
+
+.error-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c; /* Red color for error */
+  margin-bottom: 10px;
+}
+
+.error-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Set the background color for the page */
+}
+
+/* Ensure the footer stays at the bottom of the page */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}

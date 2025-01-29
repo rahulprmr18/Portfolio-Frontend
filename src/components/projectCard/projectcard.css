@@ -1,0 +1,228 @@
+/* Global Styles for Project Card Section */
+.project-section {
+  padding: 50px 20px;
+  text-align: center;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-theme .project-section {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Project Card */
+.project-card {
+  background-color: var(--card-background-light);
+  color: var(--text-light);
+  border: 1px solid var(--card-border-light);
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed), border var(--transition-speed), filter var(--transition-speed);
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 0.9;
+  will-change: transform, opacity, box-shadow;
+}
+
+/* Dark Theme Styles */
+body.dark-theme .project-card {
+  background-color: var(--card-background-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--card-border-dark);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  opacity: 1;
+}
+
+.project-card:active {
+  transform: scale(1);
+  opacity: 0.8;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--card-border-light);
+  transition: transform var(--transition-speed), filter var(--transition-speed);
+}
+
+/* Hover effect for image */
+.project-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.85);
+}
+
+.project-info {
+  padding: 1.5rem;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Heading Styles */
+.project-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-speed);
+}
+
+body.dark-theme .project-info h3 {
+  color: var(--text-dark);
+}
+
+.project-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  transition: color var(--transition-speed);
+}
+
+body.dark-theme .project-info p {
+  color: var(--text-dark);
+}
+
+.project-info .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.technologies .tech {
+  background-color: var(--tech-bg-light);
+  color: var(--tech-text-light);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-theme .project-info .technologies .tech {
+  background-color: var(--tech-bg-dark);
+  color: var(--tech-text-dark);
+}
+
+.github-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--github-link-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+body.dark-theme .github-link {
+  color: var(--github-link-dark);
+}
+
+.github-link:hover {
+  color: var(--github-link-hover);
+  text-decoration: underline;
+}
+
+/* Animation for Project Card */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 40px 15px;
+  }
+
+  .project-card {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .github-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .project-info h3 {
+    font-size: 1rem;
+  }
+
+  .project-info p {
+    font-size: 0.85rem;
+  }
+
+  .github-link {
+    font-size: 0.75rem;
+  }
+}
+
+/* Styling for Project Section */
+.projects {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-light);
+  transition: background-color var(--transition-speed);
+}
+
+body.dark-theme .projects {
+  background-color: var(--background-dark);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px; /* This ensures that the projects don't stretch too wide */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px; /* Increased margin-bottom for spacing */
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-speed);
+}
+
+body.dark-theme .section-title {
+  color: var(--text-dark);
+}

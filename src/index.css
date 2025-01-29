@@ -1,0 +1,97 @@
+/* Global Styles */
+:root {
+  /* Light Theme Colors */
+  --primary-color-light: #6487ce;
+  --secondary-color-light: #4a8dc9;
+  --background-light: #ffffff;
+  --text-light: #333333;
+  --card-background-light: #f4f4f4;
+  --card-border-light: #dddddd;
+  --tech-bg-light: #f0f0f0;
+  --tech-text-light: #333333;
+  --github-link-light: #0366d6;
+  --github-link-hover-light: #0056b3;
+
+  /* Dark Theme Colors */
+  --primary-color-dark: #425b91;
+  --secondary-color-dark: #3a6e99;
+  --background-dark: #121212;
+  --text-dark: #eaeaea;
+  --card-background-dark: #1f1f1f;
+  --card-border-dark: #444444;
+  --tech-bg-dark: #333333;
+  --tech-text-dark: #f0f0f0;
+  --github-link-dark: #6f42c1;
+  --github-link-hover-dark: #553d91;
+
+  /* Shared */
+  --border-radius: 8px;
+  --transition-speed: 0.3s ease;
+}
+
+/* Default Theme: Light */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Component-Specific Theme Styling */
+.card {
+  background-color: var(--card-background-light);
+  border: 1px solid var(--card-border-light);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+body.dark-theme .card {
+  background-color: var(--card-background-dark);
+  border-color: var(--card-border-dark);
+}
+
+.tech {
+  background-color: var(--tech-bg-light);
+  color: var(--tech-text-light);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-theme .tech {
+  background-color: var(--tech-bg-dark);
+  color: var(--tech-text-dark);
+}
+
+a.github-link {
+  color: var(--github-link-light);
+  transition: color var(--transition-speed);
+}
+
+a.github-link:hover {
+  color: var(--github-link-hover-light);
+}
+
+body.dark-theme a.github-link {
+  color: var(--github-link-dark);
+}
+
+body.dark-theme a.github-link:hover {
+  color: var(--github-link-hover-dark);
+}
+
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Transition on Theme Change */
+body {
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}

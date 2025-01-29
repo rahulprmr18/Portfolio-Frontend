@@ -1,0 +1,48 @@
+:root {
+  --background: #ffffff;
+  --text-color: #000000;
+  --link-color: #1a73e8;
+}
+
+[data-theme='dark'] {
+  --background: #1e1e1e;
+  --text-color: #f4f4f4;
+  --link-color: #bb86fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
